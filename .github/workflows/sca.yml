@@ -64,7 +64,7 @@ jobs:
           osv-scanner scan source \
             -r ./javascript \
             --format json \
-            --output-file osv-results.json
+            --output osv-results.json
 
       - name: Upload OSV Report
         if: always()
