@@ -25,7 +25,7 @@ jobs:
         uses: aquasecurity/trivy-action@v0.36.0
         with:
           scan-type: fs
-          scan-ref: ./javascript
+          scan-ref: ./javascript   # <-- only JS app folder
           scanners: vuln
           severity: HIGH,CRITICAL
           format: json
@@ -62,7 +62,7 @@ jobs:
       - name: Run OSV-Scanner
         run: |
           osv-scanner scan source \
-            -r ./javascript \
+            -r ./javascript \   # <-- only JS app folder
             --format json \
             --output-file osv-results.json
 
