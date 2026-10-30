@@ -71,6 +71,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: osv-report
-          path: osv-results.json
+          path: ./javascript/osv-results.json
           if-no-files-found: ignore
           retention-days: 30
